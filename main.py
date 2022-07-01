@@ -10,8 +10,9 @@ def main():
         question_answer = question["answer"]
         question_bank.append(Question(question_text, question_answer))
 
-    quiz_brain = QuizBrain(question_bank)
-    quiz_brain.next_question()
+    quiz = QuizBrain(question_bank)
+    while quiz.still_has_questions():
+        quiz.next_question()
 
 
 if __name__ == "__main__":
