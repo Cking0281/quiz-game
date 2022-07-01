@@ -13,6 +13,7 @@ def main():
     quiz = QuizBrain(question_bank)
     while quiz.still_has_questions():
         quiz.next_question()
+    quiz.final_report()
 
 
 if __name__ == "__main__":
